@@ -4,7 +4,7 @@ var nome = 'Capeletti';
 
 //let não pode ser redeclarada
 let idade = 37;
-let idade = 21; // Isso vai gerar um erro
+//let idade = 21; // Isso vai gerar um erro
 
 //Tipos de dados primitivos
 // string, number, undefined, null, boolean
