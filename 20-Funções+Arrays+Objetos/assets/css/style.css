@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #1a1a1a, #333);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  background: #181818;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.7);
+  color: #ffffff;
+  gap: 1.2rem;
+  
+}
+
+.formulario label {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 0.3rem;
+  font-family: sans-serif;
+    font-weight: 500;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+  background: #232323;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+  border: 1.5px solid #00c3ff;
+  outline: none;
+}
+
+.formulario button,
+.formulario input[type="submit"] {
+  background: linear-gradient(90deg, #00c3ff 0%, #3a3a3a 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  margin-top: 0.5rem;
+}
+
+.formulario button:hover,
+.formulario input[type="submit"]:hover {
+  background: linear-gradient(90deg, #3a3a3a 0%, #00c3ff 100%);
+  transform: translateY(-2px) scale(1.03);
+}
