@@ -17,7 +17,7 @@
   const pessoa2 = criaPessoa('Luiza, ', 'Capeletti', 27); */
 
 const pessoa = {
-  nome: 'Paulo',
+    nome: 'Paulo',
     sobrenome: 'Vieira',
     idade: 40,
 
