@@ -1,8 +1,18 @@
-// (condicao) ? 'Valor para verdadeiro' : 'Valor para falso';
-const pontuacaoUSuario = 1000;
-const nivelUsuario = pontuacaoUSuario >= 1000 ? 'Usuário VIP' : 'Usuário normal';
+function zeroAEsquerda (num) {
+  return num >= 10 ? num : `0${num}`;
+}
 
-const corUsuario = 'Pink';
-const corPadrao = corUsuario || 'Preta';
+function formataData(data) {
+  const dia = zeroAEsquerda(data.getDate());
+  const mes = zeroAEsquerda(data.getMonth() + 1);
+  const ano = zeroAEsquerda(data.getFullYear());
+  const hora = zeroAEsquerda(data.getHours());
+  const min = zeroAEsquerda(data.getMinutes());
+  const seg = zeroAEsquerda(data.getSeconds());
 
-console.log(nivelUsuario, corPadrao);
+  return `${dia}/${mes}/${ano} ${hora}:${min}:${seg}`;
+}
+
+const data = new Date();
+const dataBrasil = formataData(data);
+console.log(dataBrasil);
