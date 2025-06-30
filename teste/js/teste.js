@@ -31,15 +31,15 @@ namo2.mostra2();
 //-------------------------CLASS----------------------------//
 
 class Objeto3 {
-    constructor(nome, idade) {
+    constructor (nome, idade) {
         this.nome = nome;
         this.idade = idade;
     }
 
-    mostra3() {
+    mostra3 () {
         console.log(`Nome: ${this.nome} Idade: ${this.idade}`);
     }
 }
 
-const namo3 = new Objeto3(`Camila`, 20);
+const namo3 = new Objeto3 ('Ana', 20);
 namo3.mostra3();
