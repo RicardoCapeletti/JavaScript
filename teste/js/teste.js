@@ -1,45 +1,25 @@
-//------------------------FACTORY----------------------------//
-
-function criaObjeto (nome, idade) {
-    return {
-        nome,
-        idade,
-
-        mostra: function () {
-            console.log(`Nome: ${nome} Idade: ${idade}`);
-        }
-    };
-}
-
-const namo = criaObjeto ('Luna', 18);
-namo.mostra();
-
-//------------------------CONSTRUCTOR---------------------------//
-
-function CriaObjeto2 (nome, idade) {
-    this.nome = nome;
-    this.idade = idade;
-}
-
-CriaObjeto2.prototype.mostra2 = function () {
-    console.log(`Nome: ${this.nome} Idade: ${this.idade}`);
-}
-
-const namo2 = new CriaObjeto2 ('Priscila', 19);
-namo2.mostra2();
-
-//-------------------------CLASS----------------------------//
-
-class Objeto3 {
-    constructor (nome, idade) {
+class Carro {
+    constructor (nome) {
         this.nome = nome;
-        this.idade = idade;
+        this.velocidade = 0;
     }
 
-    mostra3 () {
-        console.log(`Nome: ${this.nome} Idade: ${this.idade}`);
+    acelerar () {
+        if (this.velocidade >= 100) return;
+        this.velocidade++;
+    }
+    freiar () {
+        if (this.velocidade <= 0) return;
+        this.velocidade--;
     }
 }
 
-const namo3 = new Objeto3 ('Ana', 20);
-namo3.mostra3();
+const c1 = new Carro('Fusca');
+
+for(let i = 0; i <= 200; i++) {
+    c1.acelerar();
+}
+
+console.log(c1);
+c1.freiar();
+console.log(c1);
